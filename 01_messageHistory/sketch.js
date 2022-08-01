@@ -58,7 +58,7 @@ function setup() {
     //create the text fields for the message to be sent
     sendText = createInput();
     sendText.position((windowWidth/2) - 100, windowHeight *0.8);
-  
+
     sendButton = createButton("SEND");
     sendButton.position(sendText.x + sendText.width, windowHeight * 0.8);
     sendButton.mousePressed(sendTheMessage);
@@ -97,6 +97,7 @@ function drawMessages(messageHistory) {
 
   console.log(messageHistory);
   textSize(80);
+  text.fontcolor ("white");
   for (let i = 0; i < messageHistory.length; i++) {
     
       console.log(messageHistory[i]);
