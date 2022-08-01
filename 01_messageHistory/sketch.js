@@ -10,13 +10,6 @@ let channelName = "history";
 
 let you;
 
-let scrollHeight = Math.max(
-  document.body.scrollHeight, document.documentElement.scrollHeight,
-  document.body.offsetHeight, document.documentElement.offsetHeight,
-  document.body.clientHeight, document.documentElement.clientHeight
-);
-
-alert('Full document height, with scrolled out part: ' + scrollHeight);
 //input variables for the form to PubNub
 var sendText;
 var sendButton;
