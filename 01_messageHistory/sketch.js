@@ -4,7 +4,8 @@ let subKey = "sub-c-5c7c93ad-42b7-4af3-9cce-e78ea25ba5c2";
 let secretKey = "sec-c-ZmZjMTE2NWEtNzE3OS00ZWUwLWFiOGMtN2NlNDlkZDRkYmIy";
 
 let channelName = "history";
-
+let bg;
+let img;
 let you;
 
 //input variables for the form to PubNub
@@ -14,7 +15,8 @@ var sendButton;
 let history;
 
 function preload() { 
-
+bg= loadImage ("IMG_2605.PNG")
+img= loadImage("IMG_2606.PNG")
   // logic to create a random UUID
     you = random(0,1000000); 
     console.log(you);
@@ -28,7 +30,8 @@ function preload() {
 function setup() {
 
     createCanvas(windowWidth, windowHeight);
-
+image(img, 0, 0, img.width/3, img.height/3);
+image(bg, 25, 25, img.width/3, img.height/3);
     dataServer = new PubNub({
       subscribeKey: subKey,
       publishKey: pubKey,
@@ -115,3 +118,4 @@ function readIncoming(inMessage) {
   fetchMessages();
 
 }
+ 
